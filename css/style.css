@@ -1,220 +1,160 @@
-/*
-COLORS:
-
-Light green: #7ed56f
-Medium green: #55c57a
-Dark green: #28b485
-
-*/
-
 /* border-box: keeps padding and borders from being added by default */
+*,
+*::after,
+*::before {
+  margin: 0rem;
+  padding: 0rem;
+  box-sizing: inherit; }
 
-* {
-  margin: 0px;
-  padding: 0px;
-  box-sizing: border-box;
-}
+/* because we've set the html font-size to 10px then each rem will equal 10px... if we have created some in pixels we can convert the px into rem easily */
+html {
+  font-size: 62.5%; }
 
 body {
   font-family: "Lato", sans-serif;
   font-weight: 400;
-  font-size: 16px;
+  /* font-size: 16px; */
   line-height: 1.7;
   color: #777;
-  padding: 20px;
-}
+  padding: 1rem;
+  box-sizing: border-box; }
 
 /* vh: is relative to the view height 
 top: always keeps the image at the top ()can also use center and bottom 
 can also change the direction of the gradient*/
-
 .header {
   height: 95vh;
-  background-image: linear-gradient(to right bottom,
-    rgba(126, 213, 111, 0.8),
-    rgba(40, 180, 133, 0.8)),
-    url(../img/hero.jpg);
+  background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.8), rgba(40, 180, 133, 0.8)), url(../img/hero.jpg);
   background-size: cover;
   background-position: top;
   position: relative;
-  clip-path: polygon(0 0, 100% 0, 100% 75%, 0 100%);
-}
+  clip-path: polygon(0 0, 100% 0, 100% 75%, 0 100%); }
 
-.logo-box {
+.header__logo-box {
   position: absolute;
-  top: 40px;
-  left: 40px;
-}
+  top: 4rem;
+  left: 4rem; }
 
-.logo {
-  height: 3em;
-}
+.header__logo {
+  height: 3.5rem; }
 
 .logo:hover {
-  animation: spin 4s;
-
-}
+  animation: spin 4s; }
 
 /* transform: translate are in relation to the element itself 
 the top and left are in relation to the parent element */
-
-.title-box {
+.header__title-box {
   position: absolute;
-  top: 40%;
+  top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  text-align: center;
-}
+  text-align: center; }
 
-.heading-primary {
-  color: white;
+.heading--primary {
+  color: #fff;
   text-transform: uppercase;
-
   backface-visibility: hidden;
-  margin-bottom: 40px;
-}
+  margin-bottom: 3rem; }
 
 /* span is by default a block level occupy the entire width and create line breaks after and before */
-
-.heading-primary-main {
+.heading-primary--main {
   display: block;
-  font-size: 60px;
+  font-size: 5rem;
   font-weight: 400;
-  letter-spacing: 35px;
+  letter-spacing: 3.5rem;
+  animation: moveInLeft 2s ease-out; }
 
-  animation: moveInLeft 2s ease-out;
-
-}
-
-.heading-primary-sub {
+.heading-primary--sub {
   display: block;
-  font-size: 20px;
+  font-size: 1.4rem;
   font-weight: 700;
-  letter-spacing: 17.4px;
-
-  animation: moveInRight 2s ease-out;
-
-}
+  letter-spacing: 1.75rem;
+  animation: moveInRight 2s ease-out; }
 
 @keyframes moveInLeft {
   0% {
     opacity: 0;
-    transform: translateX(-100px);
-  }
-
+    transform: translateX(-10rem); }
   /* 60% {
     transform: translateX(50px);
   } */
-
   100% {
     opacity: 1;
-    transform: translate(0);
-  }
-}
+    transform: translate(0); } }
 
 @keyframes moveInRight {
   0% {
     opacity: 0;
-    transform: translateX(100px);
-  }
-
+    transform: translateX(10rem); }
   100% {
     opacity: 1;
-    transform: translate(0);
-  }
-}
+    transform: translate(0); } }
 
 @keyframes moveInBottom {
   0% {
     opacity: 0;
-    transform: translateY(50px);
-  }
-
+    transform: translateY(5rem); }
   100% {
     opacity: 1;
-    transform: translate(0);
-  }
-}
+    transform: translate(0); } }
 
 @keyframes spin {
   0% {
     opacity: 0.3;
-    transform: rotate3d()
-  }
-
+    transform: rotate3d(); }
   25% {
-    transform: rotate3d(90deg)
-  }
-
+    transform: rotate3d(90deg); }
   50% {
-    transform: rotateY(180deg);
-  }
-
+    transform: rotateY(180deg); }
   75% {
-    transform: rotateY(270deg);
-  }
-
+    transform: rotateY(270deg); }
   100% {
     opacity: 1;
-    transform: translate(0);
-  }
-}
+    transform: translate(0); } }
 
 /* transition helps to make things animate in relation to the inital state... not quite sure I understand this.  */
-
 .btn:link,
 .btn:visited {
   text-transform: uppercase;
   text-decoration: none;
-  padding: 15px 40px;
+  padding: 1.5rem 4rem;
   display: inline-block;
-  border-radius: 100px;
-  transition: all .2s;
-  position: relative;
-}
+  border-radius: 10rem;
+  transition: all 0.2s;
+  position: relative; }
 
 .btn:hover {
   transform: translateY(-3px);
-  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
-}
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2); }
 
 .btn:active {
-  transform: translateY(-1px);
-}
+  transform: translateY(-1px); }
 
-.btn-white {
-  background-color: white;
-  color: #777;
-}
+.btn--white {
+  background-color: #fff;
+  color: #777; }
 
 /* zindex defines where layered objects are located */
-
 .btn::after {
   content: "";
   display: inline-block;
   height: 100%;
   width: 100%;
-  border-radius: 100px;
+  border-radius: 10rem;
   position: absolute;
   top: 0;
   left: 0;
   z-index: -1;
-  transition: all 0.4s;
+  transition: all 0.4s; }
 
-}
-
-.btn-white::after {
-  background-color: white;
-}
+.btn--white::after {
+  background-color: #fff; }
 
 .btn:hover::after {
   transform: scaleX(1.4) scaleY(1.6);
-  opacity: 0;
-}
+  opacity: 0; }
 
 /* animation fill mode will apply the properties before the animation starts */
-
-.btn-animated {
+.btn--animated {
   animation: moveInBottom 2s ease-out;
-  animation-fill-mode: backwards;
-}
+  animation-fill-mode: backwards; }

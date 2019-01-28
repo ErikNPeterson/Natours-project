@@ -1,0 +1,67 @@
+@keyframes moveInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-10rem);
+  }
+
+  /* 60% {
+    transform: translateX(50px);
+  } */
+
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+
+@keyframes moveInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(10rem);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+
+@keyframes moveInBottom {
+  0% {
+    opacity: 0;
+    transform: translateY(5rem);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+
+@keyframes spin {
+  0% {
+    opacity: 0.3;
+    transform: rotate3d();
+  }
+
+  25% {
+    transform: rotate3d(90deg);
+  }
+
+  50% {
+    transform: rotateY(180deg);
+  }
+
+  75% {
+    transform: rotateY(270deg);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+
+/* span is by default a block level occupy the entire width and create line breaks after and before */
+
+/* transition helps to make things animate in relation to the inital state... not quite sure I understand this.  */
