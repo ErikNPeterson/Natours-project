@@ -1,6 +1,5 @@
 .row {
   max-width: $grid-width;
-  background-color: $light-grey;
   margin: 0 auto;
 
   // this will select everything except for the last child.
@@ -12,7 +11,7 @@
 
   //the '^' symbol will allow us to select all class names with the prefix "col-" or '$' for end with.
   [class^="col-"] {
-    background-color: orangered;
+
     float: left;
 
     &:not(:last-child) {
@@ -29,8 +28,9 @@
     width: calc(((100% -2 * #{$gutter-horizontal})/3));
   }
 
+  // changes col 2 of 3
   .col-2-of-3 {
-    width: calc(((100% -2 * #{$gutter-horizontal})/3)+ #{gutter-horizontal});
+    width: calc(2 *((100% -2 + #{$gutter-horizontal})/3)+ #{gutter-horizontal});
   }
 
   .col-1-of-4 {
