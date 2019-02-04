@@ -52,3 +52,19 @@ body {
   line-height: 1.7;
   color: $dark-grey;
 }
+
+.heading-tertiary {
+font-size: 4rem;
+font-weight: 700;
+text-transform: uppercase;
+
+}
+
+.paragraph {
+font-size: 3rem; 
+
+  &:not(:last-child){
+    margin-bottom: 3rem;
+  }
+
+}
