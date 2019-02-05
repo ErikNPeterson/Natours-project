@@ -205,6 +205,24 @@ body {
   .composition:hover .composition__photo:not(:hover) {
     transform: scale(0.8); }
 
+.feature-box {
+  background-color: rgba(255, 255, 255, 0.8);
+  font-size: 1.5rem;
+  padding: 2.5rem;
+  text-align: center;
+  border-radius: 3px;
+  box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
+  transition: 0.3s; }
+  .feature-box__icon {
+    font-size: 6rem;
+    margin-bottom: 0.5rem;
+    color: transparent;
+    display: inline-block;
+    background-image: linear-gradient(to right, #7ed56f, #55c57a);
+    -webkit-background-clip: text; }
+  .feature-box:hover {
+    transform: translateY(-1.5rem) scale(1.03); }
+
 /* vh: is relative to the view height 
 top: always keeps the image at the top ()can also use center and bottom 
 can also change the direction of the gradient*/
@@ -258,5 +276,15 @@ can also change the direction of the gradient*/
 
 .section-about {
   background-color: #f7f7f7;
-  padding: 25rem 0;
+  padding: 15rem;
   margin-top: -20vh; }
+
+.section-features {
+  display: flex;
+  padding: 15rem;
+  margin: auto;
+  background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.8), rgba(40, 180, 133, 0.8)), url(../img/nat-4.jpg);
+  background-size: cover;
+  transform: skewY(-6deg); }
+  .section-features > * {
+    transform: skewY(6deg); }

@@ -1,5 +1,26 @@
+// [class^="section-"] {
+//  padding: $section-padding;
+// }
+
 .section-about {
   background-color: $light-grey-1;
-  padding: 25rem 0;
+  padding: 15rem;
   margin-top: -20vh;
+}
+
+.section-features{
+  display: flex;
+  padding: 15rem;
+  margin: auto;
+  background-image: linear-gradient(to right bottom,
+  rgba($light-green, 0.8),
+  rgba($dark-green, 0.8)),
+  url(../img/nat-4.jpg);
+  background-size: cover;
+  transform: skewY(-6deg);
+
+  & > * {
+    transform: skewY(6deg);
+  }
+
 }
