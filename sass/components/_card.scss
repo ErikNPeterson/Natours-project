@@ -1,6 +1,6 @@
 .card {
 
-  perspective: 100 rem;
+  perspective: 120 rem;
   height: 50rem;
   position: relative;
 
@@ -10,7 +10,7 @@
     font-size: 2rem;
 
     height: 50rem;
-    transition: all .8s ease;
+    transition: all 1s ease;
     position: absolute;
     top: 0;
     left: 0;
@@ -24,7 +24,7 @@
     }
 
     &--back {
-      transform: rotateY(180deg);
+      transform: rotateY(-180deg);
 
       &-1 {
         background-image: linear-gradient(to right bottom, $light-orange, $dark-orange);
