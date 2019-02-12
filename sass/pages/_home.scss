@@ -3,23 +3,32 @@
 // }
 
 .section-about {
-  background-color: $light-grey-1;
-  padding: 15rem;
-  margin-top: -20vh;
+  @include section;
 }
 
-.section-features{
+.section-tours {
+  @include section;
+
+  background-color: $light-grey-1;
+  padding: 20rem 10rem 20rem 10rem;
+  margin-top: -25vh;
+  margin-bottom: -15vh;
+  // margin-top: 20rem;
+  // padding: 25rem 0 50rem 0;
+}
+
+.section-features {
   display: flex;
-  padding: 15rem;
+  padding: 10rem;
   margin: auto;
   background-image: linear-gradient(to right bottom,
-  rgba($light-green, 0.8),
-  rgba($dark-green, 0.8)),
-  url(../img/nat-4.jpg);
+    rgba($light-green, 0.8),
+    rgba($dark-green, 0.8)),
+    url(../img/nat-4.jpg);
   background-size: cover;
   transform: skewY(-6deg);
 
-  & > * {
+  &>* {
     transform: skewY(6deg);
   }
 
